@@ -45,4 +45,4 @@ let News1Schema = new Schema({
     usersSpamvote:[String]
 });
 
-module.exports = mongoose.model('news', NewsSchema);
+module.exports = mongoose.model("News", News1Schema);
