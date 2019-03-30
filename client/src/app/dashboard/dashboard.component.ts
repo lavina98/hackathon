@@ -128,30 +128,95 @@ export class DashboardComponent implements OnInit {
   incrementTopNews() {
     this.topNewsIndex++;
   }
+
+  decrementTopNews() {
+    if (this.topNewsIndex > 0) {
+      this.topNewsIndex--;
+    }
+  }
+
   incrementBusiness() {
     this.businessIndex++;
   }
+
+  decrementBusiness() {
+    if (this.businessIndex > 0) {
+      this.businessIndex++;
+    }
+  }
+
   incrementEntertainment() {
     this.entertainmentIndex++;
   }
+
+  decrementEntertainment() {
+    if (this.entertainmentIndex > 0) {
+      this.entertainmentIndex--;
+    }
+  }
+
   incrementGeneral() {
     this.generalIndex++;
   }
+
+  decrementGeneral() {
+    if (this.generalIndex > 0) {
+      this.generalIndex--;
+    }
+  }
+
   incrementHealth() {
     this.healthIndex++;
   }
+
+  decrementHealth() {
+    if (this.healthIndex > 0) {
+      this.healthIndex--;
+    }
+  }
+
   incrementScience() {
     this.scienceIndex++;
   }
+
+  decrementScience() {
+    if (this.scienceIndex > 0) {
+      this.scienceIndex--;
+
+    }
+  }
+
   incrementSports() {
     this.sportsIndex++;
   }
+
+  decrementSports() {
+    if (this.sportsIndex > 0) {
+      this.sportsIndex--;
+    }
+  }
+
   incrementTechnology() {
     this.technologyIndex++;
+  }
+
+  decrementTechnology() {
+    if (this.technologyIndex > 0) {
+      this.technologyIndex--;
+
+    }
   }
   incrementPolitics() {
     this.politicsIndex++;
   }
+
+  decrementPolitics() {
+    if (this.politicsIndex > 0) {
+      this.politicsIndex--;
+
+    }
+  }
+
 }
 
 
