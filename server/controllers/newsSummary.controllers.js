@@ -1,17 +1,24 @@
 const ps = require('python-shell');
-const pathToPython = path.join(__dirname, '../../newsfromlink.py');
+const path = require('path');
+const pathToPython = path.join(__dirname, '../newsfromlink.py');
 
-link = 'https://economictimes.indiatimes.com/news/politics-and-nation/manohar-parrikars-sons-talk-about-continuing-his-legacy/articleshow/68646563.cms'
 
-const options = {
-    args: [
-        link
-    ]
-};
-await ps.PythonShell.run(pathToPython, options, async (err, voicedata) => {
-    if (err) {
-        console.log(err);
-    }
-    console.log(voicedata);
-    console.log('I am inside the python shell!');
-});
+
+exports.summary = async (req, res) => {
+    // link = 'https://economictimes.indiatimes.com/news/politics-and-nation/manohar-parrikars-sons-talk-about-continuing-his-legacy/articleshow/68646563.cms'
+    const link = req.body.link;
+    const options = {
+        args: [
+            link
+        ]
+    };
+    await ps.PythonShell.run(pathToPython, options, async (err, summary) => {
+
+        if (err) {
+            console.log(err);
+        }
+        console.log(summary);
+        console.log('I am inside the python shell!');
+        res.json(summary[0]);
+    });
+}   

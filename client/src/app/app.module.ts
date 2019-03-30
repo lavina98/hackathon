@@ -11,6 +11,7 @@ import { UserService } from './shared/services/user.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardService } from './shared/services/dashboard.service';
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { SummaryComponent } from './summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
