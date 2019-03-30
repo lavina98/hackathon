@@ -13,14 +13,14 @@ exports.register =  (req,res)=>{
             name:req.body.name,
             email:req.body.email,
             password:hashedPassword,
-                business: req.body.business,
-                entertainment:req.body.entertainment,
-                general:req.body.general,
-                health:req.body.health,
-                science:req.body.science,
-                sports:req.body.sports,
-                technology:req.body.technology,
-                politics:req.body.politics,
+            business: req.body.business,
+            entertainment:req.body.entertainment,
+            general:req.body.general,
+            health:req.body.health,
+            science:req.body.science,
+            sports:req.body.sports,
+            technology:req.body.technology,
+            politics:req.body.politics,
             frequentSearches: req.body.frequentSearches
         }
     );
