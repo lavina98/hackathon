@@ -1,0 +1,827 @@
+<div *ngIf="isTopNews" class="container">
+  <h1>Top Headlines</h1>
+
+  <div class="row">
+
+
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="topHeadlines[topNewsIndex+0].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ topHeadlines[topNewsIndex+0].title }}</h5>
+          <p class="card-text">
+            {{ topHeadlines[topNewsIndex+0].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ topHeadlines[topNewsIndex+0].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ topHeadlines[topNewsIndex+0].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ topHeadlines[topNewsIndex+0].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="topHeadlines[topNewsIndex+1].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <!-- <h5 class="card-title">{{ topHeadlines[1].title }}</h5> -->
+          <h6>{{ topHeadlines[topNewsIndex+1].title }}</h6>
+
+          <p class="card-text">
+            {{ topHeadlines[topNewsIndex+1].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ topHeadlines[topNewsIndex+1].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ topHeadlines[topNewsIndex+1].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ topHeadlines[topNewsIndex+1].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="topHeadlines[topNewsIndex+2].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ topHeadlines[topNewsIndex+2].title }}</h5>
+          <p class="card-text">
+            {{ topHeadlines[topNewsIndex+2].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ topHeadlines[topNewsIndex+2].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ topHeadlines[topNewsIndex+2].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ topHeadlines[topNewsIndex+2].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="topHeadlines[topNewsIndex+3].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ topHeadlines[topNewsIndex+3].title }}</h5>
+          <p class="card-text">
+            {{ topHeadlines[topNewsIndex+3].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ topHeadlines[topNewsIndex+3].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ topHeadlines[topNewsIndex+3].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ topHeadlines[topNewsIndex+3].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="incrementTopNews()">Click Me</button>
+
+</div>
+
+
+
+
+
+<div *ngIf="isBusiness" class="container">
+  <h1>Business</h1>
+
+  <div class="row">
+
+
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="business[businessIndex+0].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ business[businessIndex+0].title }}</h5>
+          <p class="card-text">
+            {{ business[businessIndex+0].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ business[businessIndex+0].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ business[businessIndex+0].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ business[businessIndex+0].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="business[businessIndex+1].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h6>{{ business[businessIndex+1].title }}</h6>
+
+          <p class="card-text">
+            {{ business[businessIndex+1].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ business[businessIndex+1].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ business[businessIndex+1].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ business[businessIndex+1].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="business[businessIndex+2].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ business[businessIndex+2].title }}</h5>
+          <p class="card-text">
+            {{ business[businessIndex+2].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ business[businessIndex+2].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ business[businessIndex+2].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ business[businessIndex+2].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="business[businessIndex+3].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ business[businessIndex+3].title }}</h5>
+          <p class="card-text">
+            {{ business[businessIndex+3].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ business[businessIndex+3].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ business[businessIndex+3].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ business[businessIndex+3].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <button (click)="incrementBusiness()">Click Me</button>
+
+  </div>
+</div>
+
+
+
+
+<div *ngIf="isEntertainment" class="container">
+  <h1>Entertainment</h1>
+
+  <div class="row">
+
+
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="entertainment[entertainmentIndex+0].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ entertainment[entertainmentIndex+0].title }}</h5>
+          <p class="card-text">
+            {{ entertainment[entertainmentIndex+0].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ entertainment[entertainmentIndex+0].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ entertainment[entertainmentIndex+0].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ entertainment[entertainmentIndex+0].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="entertainment[entertainmentIndex+1].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h6>{{ entertainment[entertainmentIndex+1].title }}</h6>
+
+          <p class="card-text">
+            {{ entertainment[entertainmentIndex+1].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ entertainment[entertainmentIndex+1].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ entertainment[entertainmentIndex+1].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ entertainment[entertainmentIndex+1].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="entertainment[entertainmentIndex+2].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ entertainment[entertainmentIndex+2].title }}</h5>
+          <p class="card-text">
+            {{ entertainment[entertainmentIndex+2].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ entertainment[entertainmentIndex+2].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ entertainment[entertainmentIndex+2].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ entertainment[entertainmentIndex+2].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="entertainment[entertainmentIndex+3].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ entertainment[entertainmentIndex+3].title }}</h5>
+          <p class="card-text">
+            {{ entertainment[entertainmentIndex+3].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ entertainment[entertainmentIndex+3].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ entertainment[entertainmentIndex+3].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ entertainment[entertainmentIndex+3].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <button (click)="incrementEntertainment()">Click Me</button>
+
+</div>
+
+
+
+
+
+<div *ngIf="isGeneral" class="container">
+  <h1>General</h1>
+
+  <div class="row">
+
+
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="general[generalIndex+0].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ general[generalIndex+0].title }}</h5>
+          <p class="card-text">
+            {{ general[generalIndex+0].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ general[generalIndex+0].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ general[generalIndex+0].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ general[generalIndex+0].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="general[generalIndex+1].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h6>{{ general[generalIndex+1].title }}</h6>
+
+          <p class="card-text">
+            {{ general[generalIndex+1].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ general[generalIndex+1].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ general[generalIndex+1].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ general[generalIndex+1].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="general[generalIndex+2].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ general[generalIndex+2].title }}</h5>
+          <p class="card-text">
+            {{ general[generalIndex+2].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ general[generalIndex+2].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ general[generalIndex+2].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ general[generalIndex+2].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="general[generalIndex+3].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ general[generalIndex+3].title }}</h5>
+          <p class="card-text">
+            {{ general[generalIndex+3].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ general[generalIndex+3].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ general[generalIndex+3].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ general[generalIndex+3].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <button (click)="incrementGeneral()">Click Me</button>
+
+</div>
+
+
+
+
+<div *ngIf="isHealth" class="container">
+  <h1>Health</h1>
+
+  <div class="row">
+
+
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="health[healthIndex+0].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ health[healthIndex+0].title }}</h5>
+          <p class="card-text">
+            {{ health[healthIndex+0].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ health[healthIndex+0].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ health[healthIndex+0].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ health[healthIndex+0].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="health[healthIndex+1].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h6>{{ health[healthIndex+1].title }}</h6>
+
+          <p class="card-text">
+            {{ health[healthIndex+1].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ health[healthIndex+1].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ health[healthIndex+1].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ health[healthIndex+1].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="health[healthIndex+2].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ health[healthIndex+2].title }}</h5>
+          <p class="card-text">
+            {{ health[healthIndex+2].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ health[healthIndex+2].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ health[healthIndex+2].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ health[healthIndex+2].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="health[healthIndex+3].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ health[healthIndex+3].title }}</h5>
+          <p class="card-text">
+            {{ health[healthIndex+3].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ health[healthIndex+3].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ health[healthIndex+3].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ health[healthIndex+3].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <button (click)="incrementHealth()">Click Me</button>
+
+</div>
+
+
+
+
+<div *ngIf="isScience" class="container">
+  <h1>Science</h1>
+
+  <div class="row">
+
+
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="science[scienceIndex+0].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ science[scienceIndex+0].title }}</h5>
+          <p class="card-text">
+            {{ science[scienceIndex+0].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ science[scienceIndex+0].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ science[scienceIndex+0].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ science[scienceIndex+0].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="science[scienceIndex+1].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <!-- <h5 class="card-title">{{ science[1].title }}</h5> -->
+          <h6>{{ science[scienceIndex+1].title }}</h6>
+
+          <p class="card-text">
+            {{ science[scienceIndex+1].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ science[scienceIndex+1].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ science[scienceIndex+1].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ science[scienceIndex+1].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="science[scienceIndex+2].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ science[scienceIndex+2].title }}</h5>
+          <p class="card-text">
+            {{ science[scienceIndex+2].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ science[scienceIndex+2].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ science[scienceIndex+2].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ science[scienceIndex+2].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="science[scienceIndex+3].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ science[scienceIndex+3].title }}</h5>
+          <p class="card-text">
+            {{ science[scienceIndex+3].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ science[scienceIndex+3].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ science[scienceIndex+3].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ science[scienceIndex+3].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="incrementScience()">Click Me</button>
+
+</div>
+
+
+
+
+<div *ngIf="isSports" class="container">
+  <h1>Sports</h1>
+
+  <div class="row">
+
+
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="sports[sportsIndex+0].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ sports[sportsIndex+0].title }}</h5>
+          <p class="card-text">
+            {{ sports[sportsIndex+0].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ sports[sportsIndex+0].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ sports[sportsIndex+0].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ sports[sportsIndex+0].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="sports[sportsIndex+1].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <!-- <h5 class="card-title">{{ sports[1].title }}</h5> -->
+          <h6>{{ sports[sportsIndex+1].title }}</h6>
+
+          <p class="card-text">
+            {{ sports[sportsIndex+1].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ sports[sportsIndex+1].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ sports[sportsIndex+1].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ sports[sportsIndex+1].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="sports[sportsIndex+2].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ sports[sportsIndex+2].title }}</h5>
+          <p class="card-text">
+            {{ sports[sportsIndex+2].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ sports[sportsIndex+2].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ sports[sportsIndex+2].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ sports[sportsIndex+2].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="sports[sportsIndex+3].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ sports[sportsIndex+3].title }}</h5>
+          <p class="card-text">
+            {{ sports[sportsIndex+3].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ sports[sportsIndex+3].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ sports[sportsIndex+3].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ sports[sportsIndex+3].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="incrementSports()">Click Me</button>
+
+</div>
+
+
+
+
+<div *ngIf="isTechnology" class="container">
+  <h1>Technology</h1>
+
+  <div class="row">
+
+
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="technology[technologyIndex+0].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ technology[technologyIndex+0].title }}</h5>
+          <p class="card-text">
+            {{ technology[technologyIndex+0].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ technology[technologyIndex+0].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ technology[technologyIndex+0].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ technology[technologyIndex+0].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="technology[technologyIndex+1].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <!-- <h5 class="card-title">{{ technology[1].title }}</h5> -->
+          <h6>{{ technology[technologyIndex+1].title }}</h6>
+
+          <p class="card-text">
+            {{ technology[technologyIndex+1].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ technology[technologyIndex+1].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ technology[technologyIndex+1].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ technology[technologyIndex+1].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="technology[technologyIndex+2].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ technology[technologyIndex+2].title }}</h5>
+          <p class="card-text">
+            {{ technology[technologyIndex+2].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ technology[technologyIndex+2].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ technology[technologyIndex+2].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ technology[technologyIndex+2].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="technology[technologyIndex+3].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ technology[technologyIndex+3].title }}</h5>
+          <p class="card-text">
+            {{ technology[technologyIndex+3].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ technology[technologyIndex+3].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ technology[technologyIndex+3].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ technology[technologyIndex+3].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="incrementTechnology()">Click Me</button>
+
+</div>
+
+
+
+
+<div *ngIf="isPolitics" class="container">
+  <h1>Politics</h1>
+
+  <div class="row">
+
+
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="politics[politicsIndex+0].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ politics[politicsIndex+0].title }}</h5>
+          <p class="card-text">
+            {{ politics[politicsIndex+0].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ politics[politicsIndex+0].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ politics[politicsIndex+0].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ politics[politicsIndex+0].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="politics[politicsIndex+1].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <!-- <h5 class="card-title">{{ politics[1].title }}</h5> -->
+          <h6>{{ politics[politicsIndex+1].title }}</h6>
+
+          <p class="card-text">
+            {{ politics[politicsIndex+1].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ politics[politicsIndex+1].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ politics[politicsIndex+1].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ politics[politicsIndex+1].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="politics[politicsIndex+2].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ politics[politicsIndex+2].title }}</h5>
+          <p class="card-text">
+            {{ politics[politicsIndex+2].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ politics[politicsIndex+2].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ politics[politicsIndex+2].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ politics[politicsIndex+2].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" [src]="politics[politicsIndex+3].imageURL" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ politics[politicsIndex+3].title }}</h5>
+          <p class="card-text">
+            {{ politics[politicsIndex+3].description }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-primary">Upvote {{ politics[politicsIndex+3].upvotes }}</button>
+          <button class="btn-danger">
+            DownVote {{ politics[politicsIndex+3].downvotes }}
+          </button>
+          <button class="btn-warning">Spam {{ politics[politicsIndex+3].spam }}</button>
+          <button class="btn-info">View Summary</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="incrementPolitics()">Click Me</button>
+
+</div>

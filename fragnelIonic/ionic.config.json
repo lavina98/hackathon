@@ -1,0 +1,7 @@
+{
+  "name": "fragnelIonic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
