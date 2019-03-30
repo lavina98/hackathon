@@ -15,7 +15,8 @@ app.use(cors());
 app.use(bodyParser.json());
 // Connect to Mongoose and set connection variable
 // mongoose.connect('mongodb+srv://admin:admin@cluster0-evetk.mongodb.net/test?retryWrites=true');
-// var db = mongoose.connection;
+mongoose.connect('mongodb://localhost:27017/fragnel');
+var db = mongoose.connection;
 
 
 // Setup server port
