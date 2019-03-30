@@ -5,13 +5,13 @@ from nltk.tokenize.punkt import PunktSentenceTokenizer
 from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
 import sys
 
-# link = sys.argv[1]
+link = sys.argv[1]
 # link = 'https://www.google.com'
-link = 'https://economictimes.indiatimes.com/news/politics-and-nation/manohar-parrikars-sons-talk-about-continuing-his-legacy/articleshow/68646563.cms'
+#link = 'https://economictimes.indiatimes.com/news/politics-and-nation/manohar-parrikars-sons-talk-about-continuing-his-legacy/articleshow/68646563.cms'
 
 content = Article(link)
 
-print(content.text)
+# print(content.text)
 
 
 try:
