@@ -8,12 +8,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserService } from './shared/services/user.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardService } from './shared/services/dashboard.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import { UserService } from './shared/services/user.service';
     AppRoutingModule
   ],
   providers: [
-    UserService
+    UserService,
+    DashboardService
   ],
   bootstrap: [AppComponent]
 })

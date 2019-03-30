@@ -13,6 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 // Connect to Mongoose and set connection variable
 mongoose.connect('mongodb://localhost:27017/fragnel');
+// mongoose.connect('mongodb+srv://luvina1009:spit123%21@cluster0-gzurj.mongodb.net/test?retryWrites=true')
 var db = mongoose.connection;
 
 
