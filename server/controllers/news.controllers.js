@@ -28,9 +28,18 @@ exports.topHeadlines = async (req, res) => {
                 downvotes: 0,
                 spam: 0
             });
+            objToPush.save((err) => {
+                if (err) {
+                    console.log(err);
+                }
+            })
             response.push(objToPush)
         }
         console.log(response);
+
+        // News.save()
+
+
         res.send(response);
     })
 

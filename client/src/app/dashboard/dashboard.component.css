@@ -1,3 +1,12 @@
 .card{
     display: inline;
 }
+
+img {
+    max-height: 200px;
+    max-width: 300px;
+}
+
+.card-text {
+    max-height: 200px;
+}

@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 let News1Schema = new Schema({
     url: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     imageURL: {
         type: String,
@@ -18,9 +19,11 @@ let News1Schema = new Schema({
         type: String,
         required: true
     },
-    source: {
-        type: String,
-        required: true
+    sourceID: {
+        type: String
+    },
+    sourceName: {
+        type: String
     },
     category: {
         type: String
@@ -42,4 +45,4 @@ let News1Schema = new Schema({
     usersSpamvote:[String]
 });
 
-module.exports = mongoose.model("News", News1Schema);
+module.exports = mongoose.model('news', NewsSchema);
