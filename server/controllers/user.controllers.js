@@ -1,6 +1,5 @@
 const User = require('../models/user.models');
 const passwordHash = require('password-hash');
-
 exports.test = function (req, res) {
     res.send('greetings');
 }
@@ -50,6 +49,19 @@ exports.login = (req, res) => {
         }
     })
 
+}
+
+exports.userLikedNews = function(req,res) {
+    let newsToAdd = new News({
+        url:'abc',
+        imageURL:'okay'
+    });
+    newsToAdd.save((err)=>{
+        if(!err)
+            res.send(err);
+        else 
+            res.send('success');
+    });
 
 
 }

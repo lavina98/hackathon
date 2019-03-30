@@ -1,10 +1,9 @@
-const News = require('../models/news.models');
 const request = require('request');
 
 
 exports.topHeadlines = async (req, res) => {
     console.log(req.body);
-    const response = [];
+    const response = []; 
     var x = await request.get('https://newsapi.org/v2/top-headlines?country=in&pageSize=20&apiKey=1f15c18f8a264fb6a7b5e10ee272a614', (err, res1, body) => {
         var i = 0;
         const obj = JSON.parse(body);

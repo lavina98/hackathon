@@ -1,8 +1,7 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-let NewsSchema = new Schema({
-
+let News1Schema = new Schema({
     url: {
         type: String,
         required: true
@@ -37,7 +36,10 @@ let NewsSchema = new Schema({
     spam: {
         type: Number,
         default: 0
-    }
-})
+    },
+    usersUpvote:[String],
+    usersDownvote:[String],
+    usersSpamvote:[String]
+});
 
-module.exports = mongoose.model('News', NewsSchema);
+module.exports = mongoose.model("News", News1Schema);
