@@ -8,8 +8,9 @@ export class DashboardService {
 
     }
 
-    getTopHeadlines() {
-        return this.http.get('http://192.168.43.252:3000/news/topHeadlines');
+    getNews(category: string) {
+        return this.http.get('http://192.168.43.252:3000/news/' + category);
     }
+
 }
 
