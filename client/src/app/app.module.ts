@@ -10,13 +10,17 @@ import { RegisterComponent } from './register/register.component';
 import { UserService } from './shared/services/user.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardService } from './shared/services/dashboard.service';
+import { ChatbotComponent } from './chatbot/chatbot.component';
+import { SummaryComponent } from './summary/summary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    ChatbotComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
