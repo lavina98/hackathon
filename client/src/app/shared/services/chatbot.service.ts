@@ -9,7 +9,7 @@ export class ChatbotService {
   constructor(private http: HttpClient) { }
 
   getAnswer(userQuery: string) {
-    const url = 'http://localhost:3000/chatbot/answer';
+    const url = 'http://192.168.43.252:3000/chatbot/answer';
     return this.http.post(url, { text: userQuery });
   }
 }

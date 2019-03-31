@@ -18,10 +18,21 @@ export class SummaryService {
   }
 
   getSummary(newsUrl) {
-    const url = 'http://localhost:3000/news/summary';
+    const url = 'http://192.168.43.252:3000/news/summary';
     const body = {
       link: newsUrl
     };
     return this.http.post(url, body);
+  }
+
+
+  getMaliciousContent(url, sourceName, upvotes, downvotes) {
+    const body = {
+      pub_id: sourceName,
+      link: url,
+      upVotes: upvotes,
+      downVotes: downvotes
+    };
+    return this.http.post('http://192.168.43.252:3000/news/maliciousContent', body);
   }
 }
