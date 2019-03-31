@@ -1,4 +1,4 @@
-<!-- <div class="container">
+<div class="container">
   <div id="chatBot">
     <div class="row">
       <div class="col-md-3"></div>
@@ -7,16 +7,40 @@
           <table class="table table-striped table-hover">
             <thead>
               <tr>
-                <th scope="col">Chats</th>
+                <th scope="col" >Chats</th>
               </tr>
             </thead>
             <tbody>
-
+                <div *ngFor="let x of arr">
+                  <tr>
+                    <td>
+                        <div *ngIf="x.right">
+                            <p style="text-align:right">{{x.text}}</p>
+                          </div>
+                          <div *ngIf="!x.right">
+                             <p style="text-align:left">{{x.text}}</p>
+                           </div>
+                    </td>
+                  </tr>
+                  </div>
             </tbody>
           </table>
         </div>
-
-
+        <br><br>
+        <form [formGroup]="chatbotForm">
+            <div class="form-group">
+          
+              <div class="form-control form_element">
+                <br>
+                <input class="input_field" type="text" formControlName="text" placeholder="Start Typing">
+              </div>
+              <br>
+          
+              <button class="btn btn-secondary" [disabled]="!chatbotForm.valid" (click)="addMessage()"
+                id="submit_button">Send</button>
+              <br>
+            </div>
+          </form>
        
 
 
@@ -25,20 +49,12 @@
       <div class="col-md-3"></div>
     </div>
   </div>
-</div> -->
-<div *ngFor="let x of arr">{{x.text}}</div>
-
-<form [formGroup]="chatbotForm">
-  <div class="form-group">
-
-    <div class="form-control form_element">
-      <br>
-      <input class="input_field" type="text" formControlName="text" placeholder="Start Typing">
-    </div>
-    <br>
-
-    <button class="btn btn-secondary" [disabled]="!chatbotForm.valid" (click)="addMessage()"
-      id="submit_button">Send</button>
-    <br>
+</div>
+<!-- <div *ngFor="let x of arr">
+  <div *ngIf="right">
+    <p style="text-align:right"></p>{{x.text}}
   </div>
-</form>
+  <div *ngIf="!right">
+      <p style="text-align:left"></p>{{x.text}}
+    </div>
+</div> -->

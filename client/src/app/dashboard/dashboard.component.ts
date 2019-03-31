@@ -128,6 +128,10 @@ export class DashboardComponent implements OnInit {
 
   }
 
+  chatWithBot(){
+    this.router.navigate(['/chatbot']);
+  }
+
   incrementTopNews() {
     this.topNewsIndex++;
   }

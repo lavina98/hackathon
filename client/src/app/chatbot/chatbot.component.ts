@@ -33,7 +33,7 @@ export class ChatbotComponent implements OnInit {
 
 
   addMessage() {
-    const obj = { email: this.email, text: this.chatbotForm.value.text, align: 'right' };
+    const obj = { email: this.email, text: this.chatbotForm.value.text, right: true };
     this.arr.push(obj);
     console.log(this.chatbotForm.value.text);
     const text1 = this.chatbotForm.value.text;
@@ -44,7 +44,9 @@ export class ChatbotComponent implements OnInit {
         if (res === 'Less') {
           this.arr.push({ text: 'Please enter a different query' });
         } else {
-          this.arr.push({ text: res[0].description + '<br/>' + res[1].description + '<br/>' + res[2].description + '<br>' });
+          this.arr.push({text:res[0].description , right:false});
+          this.arr.push({text:res[1].description , right:false});
+          this.arr.push({text:res[2].description , right:false});
 
         }
       }

@@ -1,6 +1,11 @@
 <div *ngIf="isTopNews" class="container">
-  <h1>Top Headlines</h1>
-
+  <br><br>
+  <h1 style="text-align:center">Top Headlines</h1>
+  <div class="row">
+      <div class="col-md-9"></div>
+      <div class="col-md-"> <button class="btn btn-primary" (click)="chatWithBot()">Chat</button></div>
+  </div>
+<br>
   <div class="row">
 
 
@@ -9,9 +14,9 @@
         <img class="card-img-top" [src]="topHeadlines[topNewsIndex+0].imageURL" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ topHeadlines[topNewsIndex+0].title }}</h5>
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ topHeadlines[topNewsIndex+0].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(topNewsIndex, topHeadlines)">Upvote
@@ -19,8 +24,8 @@
           <button class="btn btn-danger" (click)="downvote(topNewsIndex , topHeadlines)">
             DownVote {{ topHeadlines[topNewsIndex+0].downvotes }}
           </button>
-          <button class="btn btn-warning" (click)="getSummary(topHeadlines[topNewsIndex+0].url)">Spam
-            {{ topHeadlines[topNewsIndex+0].spam }}</button>
+          <button class="btn btn-info" (click)="getSummary(topHeadlines[topNewsIndex+0].url)">Summary
+            {{ topHeadlines[topNewsIndex+0].Summary }}</button>
           <button class="btn btn-warning" (click)="spam(topNewsIndex , topHeadlines)">Spam
             {{ topHeadlines[topNewsIndex+0].spam }}</button>
         </div>
@@ -33,9 +38,9 @@
           <!-- <h5 class="card-title">{{ topHeadlines[1].title }}</h5> -->
           <h6>{{ topHeadlines[topNewsIndex+1].title }}</h6>
 
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ topHeadlines[topNewsIndex+1].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(topNewsIndex+1 , topHeadlines)">Upvote
@@ -55,9 +60,9 @@
         <img class="card-img-top" [src]="topHeadlines[topNewsIndex+2].imageURL" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ topHeadlines[topNewsIndex+2].title }}</h5>
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ topHeadlines[topNewsIndex+2].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(topNewsIndex+2 , topHeadlines)">Upvote
@@ -76,9 +81,9 @@
         <img class="card-img-top" [src]="topHeadlines[topNewsIndex+3].imageURL" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ topHeadlines[topNewsIndex+3].title }}</h5>
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ topHeadlines[topNewsIndex+3].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(topNewsIndex+3 , topHeadlines)">Upvote
@@ -113,9 +118,9 @@
         <img class="card-img-top" [src]="business[businessIndex+0].imageURL" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ business[businessIndex+0].title }}</h5>
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ business[businessIndex+0].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(businessIndex , business)">Upvote
@@ -135,9 +140,9 @@
         <div class="card-body">
           <h6>{{ business[businessIndex+1].title }}</h6>
 
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ business[businessIndex+1].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(businessIndex+1 , business)">Upvote
@@ -156,9 +161,9 @@
         <img class="card-img-top" [src]="business[businessIndex+2].imageURL" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ business[businessIndex+2].title }}</h5>
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ business[businessIndex+2].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(businessIndex+2 , business)">Upvote
@@ -177,9 +182,9 @@
         <img class="card-img-top" [src]="business[businessIndex+3].imageURL" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ business[businessIndex+3].title }}</h5>
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ business[businessIndex+3].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(businessIndex+3 , business)">Upvote
@@ -213,9 +218,9 @@
         <img class="card-img-top" [src]="entertainment[entertainmentIndex+0].imageURL" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ entertainment[entertainmentIndex+0].title }}</h5>
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ entertainment[entertainmentIndex+0].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(entertainmentIndex , entertainment)">Upvote
@@ -235,9 +240,9 @@
         <div class="card-body">
           <h6>{{ entertainment[entertainmentIndex+1].title }}</h6>
 
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ entertainment[entertainmentIndex+1].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(entertainmentIndex+1 , entertainment)">Upvote
@@ -256,9 +261,9 @@
         <img class="card-img-top" [src]="entertainment[entertainmentIndex+2].imageURL" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ entertainment[entertainmentIndex+2].title }}</h5>
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ entertainment[entertainmentIndex+2].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(entertainmentIndex+2 , entertainment)">Upvote
@@ -278,9 +283,9 @@
         <img class="card-img-top" [src]="entertainment[entertainmentIndex+3].imageURL" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ entertainment[entertainmentIndex+3].title }}</h5>
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ entertainment[entertainmentIndex+3].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(entertainmentIndex+3, entertainment)">Upvote
@@ -316,9 +321,9 @@
         <img class="card-img-top" [src]="general[generalIndex+0].imageURL" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ general[generalIndex+0].title }}</h5>
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ general[generalIndex+0].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(generalIndex , general)">Upvote
@@ -338,9 +343,9 @@
         <div class="card-body">
           <h6>{{ general[generalIndex+1].title }}</h6>
 
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ general[generalIndex+1].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(generalIndex+1 , general)">Upvote
@@ -359,9 +364,9 @@
         <img class="card-img-top" [src]="general[generalIndex+2].imageURL" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ general[generalIndex+2].title }}</h5>
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ general[generalIndex+2].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(generalIndex+2 , general)">Upvote
@@ -381,9 +386,9 @@
         <img class="card-img-top" [src]="general[generalIndex+3].imageURL" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ general[generalIndex+3].title }}</h5>
-          <p class="card-text">
+          <!-- <p class="card-text">
             {{ general[generalIndex+3].description }}
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <button class="btn btn-primary" (click)="upvote(generalIndex+3 , general)">Upvote
