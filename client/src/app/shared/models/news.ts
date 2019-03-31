@@ -6,5 +6,5 @@ export interface INews {
     spam: number;
     title: number;
     upvotes: number;
-    url: number;
+    url: string;
 }

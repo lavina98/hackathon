@@ -217,6 +217,26 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  upvote(index: number, arr: INews[]){
+    arr[index].upvotes ++;
+    this.dashboardService.voteup(arr[index].url, arr[index].upvotes).subscribe((data)=>{
+      console.log(data);
+    });
+  }
+
+  downvote(index: number, arr: INews[]){
+    arr[index].downvotes ++;
+    this.dashboardService.votedown(arr[index].url, arr[index].downvotes).subscribe((data)=>{
+      console.log(data);
+    });
+  }
+
+  spam(index: number, arr: INews[]){
+    arr[index].spam ++;
+    this.dashboardService.markSpam(arr[index].url, arr[index].spam).subscribe((data)=>{
+      console.log(data);
+    });
+  }
 }
 
 
