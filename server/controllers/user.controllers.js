@@ -51,15 +51,15 @@ exports.login = (req, res) => {
 
 }
 
-exports.userLikedNews = function(req,res) {
+exports.userLikedNews = function (req, res) {
     let newsToAdd = new News({
-        url:'abc',
-        imageURL:'okay'
+        url: 'abc',
+        imageURL: 'okay'
     });
-    newsToAdd.save((err)=>{
-        if(!err)
+    newsToAdd.save((err) => {
+        if (!err)
             res.send(err);
-        else 
+        else
             res.send('success');
     });
 
