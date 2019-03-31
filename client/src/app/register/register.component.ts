@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { UserService } from '../shared/services/user.service';
+import { Component, OnInit } from "@angular/core";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { UserService } from "../shared/services/user.service";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: "app-register",
+  templateUrl: "./register.component.html",
+  styleUrls: ["./register.component.css"]
 })
 export class RegisterComponent implements OnInit {
-
   registerForm: FormGroup;
   prefObj = [];
 
@@ -23,7 +23,11 @@ export class RegisterComponent implements OnInit {
     { name: 'Politics', FCName: 'politics', pref: false }
   ];
 
-  constructor(private fb: FormBuilder, private userService: UserService) {
+  constructor(
+    private fb: FormBuilder,
+    private userService: UserService,
+    private router: Router
+  ) {
     this.registerForm = fb.group({
       name: this.fb.control('', [Validators.required]),
       email: this.fb.control('', [Validators.required]),
@@ -36,14 +40,13 @@ export class RegisterComponent implements OnInit {
       science: this.fb.control(false),
       sports: this.fb.control(false),
       technology: this.fb.control(false),
-      politics: this.fb.control(false),
+      politics: this.fb.control(false)
 
       // frequentSearchs: this.fb.control('', [Validators.required])
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   log(i) {
     console.log(i);
@@ -71,6 +74,16 @@ export class RegisterComponent implements OnInit {
     // const obj = this.registerForm.value;
     console.log(obj);
     // console.log(this.preferences);
-    this.userService.register(obj).subscribe();
+    this.userService.register(obj).subscribe((data: { message: string }) => {
+      console.log(data);
+      if (data.message === 'Valid') {
+        console.log('registration successfull');
+        this.router.navigate(['/dashboard']);
+        this.userService.setUserEmail(val.email);
+      } else {
+        console.log('unsuccessfull try again');
+        this.router.navigate(['/register']);
+      }
+    });
   }
 }
