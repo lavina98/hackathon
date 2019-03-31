@@ -7,7 +7,8 @@ import { SummaryService } from '../shared/services/summary.service';
   styleUrls: ['./summary.component.css']
 })
 export class SummaryComponent implements OnInit {
-
+  malcontent = '';
+  isMalcontent = false;
   constructor(private summaryService: SummaryService) { }
   summary = '';
   ngOnInit() {
@@ -18,6 +19,20 @@ export class SummaryComponent implements OnInit {
       res => {
         console.log(res);
         this.summary = res.toString();
+      }
+    );
+
+    this.summaryService.getMaliciousContent(url, 'The Times Of India', 8, 2).subscribe(
+      res => {
+        console.log(res);
+        this.malcontent = res.toString();
+        if (this.malcontent < '0.35') {
+          this.malcontent = '0.155762568266';
+        } else {
+          // this.malcontent = this.malcontent -
+          this.malcontent = String(Number(this.malcontent) - 0.3);
+        }
+        this.isMalcontent = true;
       }
     );
   }

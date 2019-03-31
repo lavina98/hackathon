@@ -21,4 +21,25 @@ exports.summary = async (req, res) => {
         console.log('I am inside the python shell!');
         res.json(summary[0]);
     });
-}   
+}
+
+exports.maliciousContent = async (req, res) => {
+    console.log(req.body.link);
+    const options = {
+        args: [
+            req.body.link
+        ]
+    }
+    const path1 = path.join(__dirname, '../malicious/start.py');
+    console.log(path1);
+    await ps.PythonShell.run(path1, options, async (err, summary) => {
+
+        if (err) {
+            console.log(err);
+        }
+        console.log(summary);
+        console.log('I am inside the python malicious shell!');
+        res.json(summary[0]);
+    });
+
+};

@@ -18,7 +18,8 @@
           <button class="btn btn-danger">
             DownVote {{ topHeadlines[topNewsIndex+0].downvotes }}
           </button>
-          <button class="btn btn-warning">Spam {{ topHeadlines[topNewsIndex+0].spam }}</button>
+          <button class="btn btn-warning" (click)="getSummary(topHeadlines[topNewsIndex+0].url)">Spam
+            {{ topHeadlines[topNewsIndex+0].spam }}</button>
           <button class="btn btn-info">View Summary</button>
         </div>
       </div>
@@ -40,7 +41,7 @@
             DownVote {{ topHeadlines[topNewsIndex+1].downvotes }}
           </button>
           <button class="btn btn-warning">Spam {{ topHeadlines[topNewsIndex+1].spam }}</button>
-          <button class="btn btn-info">View Summary</button>
+          <button class="btn btn-info" (click)="getSummary(topHeadlines[topNewsIndex+1].url)">View Summary</button>
         </div>
       </div>
     </div>
@@ -59,7 +60,7 @@
             DownVote {{ topHeadlines[topNewsIndex+2].downvotes }}
           </button>
           <button class="btn btn-warning">Spam {{ topHeadlines[topNewsIndex+2].spam }}</button>
-          <button class="btn btn-info">View Summary</button>
+          <button class="btn btn-info" (click)="getSummary(topHeadlines[topNewsIndex+2].url)">View Summary</button>
         </div>
       </div>
     </div>
@@ -78,7 +79,7 @@
             DownVote {{ topHeadlines[topNewsIndex+3].downvotes }}
           </button>
           <button class="btn btn-warning">Spam {{ topHeadlines[topNewsIndex+3].spam }}</button>
-          <button class="btn btn-info">View Summary</button>
+          <button class="btn btn-info" (click)="getSummary(topHeadlines[topNewsIndex+3].url)">View Summary</button>
         </div>
       </div>
     </div>

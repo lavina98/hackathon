@@ -9,7 +9,7 @@ export class DashboardService {
     }
 
     getNews(category: string) {
-        return this.http.get('http://localhost:3000/news/' + category);
+        return this.http.get('http://192.168.43.252:3000/news/' + category);
     }
 
 }

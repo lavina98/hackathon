@@ -2,15 +2,14 @@ const request = require('request');
 const News = require('../models/news1.model');
 
 exports.topHeadlines = async (req, res) => {
-    console.log(req.body);
     const response = [];
-    var x = await request.get('https://newsapi.org/v2/top-headlines?country=in&pageSize=20&apiKey=1f15c18f8a264fb6a7b5e10ee272a614', (err, res1, body) => {
+    var x = await request.get('https://newsapi.org/v2/top-headlines?country=in&pageSize=20&apiKey=7f25608555944961a78ab3373a73b6a1', (err, res1, body) => {
         var i = 0;
         const obj = JSON.parse(body);
         var size = obj.totalResults;
         // console.log(obj);
         // res.send(obj);
-        console.log(size);
+        console.log(body);
         var i = 0;
         var news = obj.articles;
         // console.log(news[11]);
@@ -105,7 +104,7 @@ exports.politics = async (req, res) => {
 
 async function getNews(category, req, res) {
     var response = [];
-    const url = 'https://newsapi.org/v2/everything?q=' + category + '&language=en&sortBy=relevancy,publishedAt&pageSize=20&apiKey=1f15c18f8a264fb6a7b5e10ee272a614';
+    const url = 'https://newsapi.org/v2/everything?q=' + category + '&language=en&sortBy=relevancy,publishedAt&pageSize=20&apiKey=7f25608555944961a78ab3373a73b6a1';
     await request.get(url, (err, res1, body) => {
 
         var i = 0;

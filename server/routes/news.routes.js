@@ -16,5 +16,8 @@ router.get('/technology', newsController.technology);
 router.get('/politics', newsController.politics);
 
 router.post('/summary', newsSummaryController.summary);
+router.post('/maliciousContent', newsSummaryController.maliciousContent);
+
+
 
 module.exports = router;

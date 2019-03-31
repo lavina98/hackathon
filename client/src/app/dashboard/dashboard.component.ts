@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from '../shared/services/dashboard.service';
 import { INews } from '../shared/models/news';
+import { SummaryService } from '../shared/services/summary.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -29,7 +31,8 @@ export class DashboardComponent implements OnInit {
   isPolitics = false;
 
 
-  constructor(private dashboardService: DashboardService) { }
+  constructor(private dashboardService: DashboardService, private summaryService: SummaryService, private router: Router) { }
+
   topHeadlines: INews[] = [];
   business: INews[] = [];
   entertainment: INews[] = [];
@@ -215,6 +218,11 @@ export class DashboardComponent implements OnInit {
       this.politicsIndex--;
 
     }
+  }
+
+  getSummary(link) {
+    this.summaryService.setUrl(link);
+    this.router.navigate(['/summary']);
   }
 
 }

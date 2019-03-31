@@ -19,7 +19,7 @@ exports.getAnswer = async (req, res) => {
         }
         console.log(keywords);
         console.log('I am inside the python shell!');
-        const url = 'https://newsapi.org/v2/everything?q=' + keywords[1] + '&sources=the-times-of-india,the-hindu&sortBy=relevance&pageSize=100&apiKey=142d4ee37d7d4fc7b0ef19b049bc03e1';
+        const url = 'https://newsapi.org/v2/everything?q=' + keywords[1] + '&sources=the-times-of-india,the-hindu&sortBy=relevance&pageSize=100&apiKey=7f25608555944961a78ab3373a73b6a1';
         console.log(url);
         request.get(url, (err, res1, body) => {
             var response = [];
