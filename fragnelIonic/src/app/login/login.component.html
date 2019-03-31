@@ -1,0 +1,23 @@
+<form [formGroup]="loginForm">
+  <div class="form-group">
+
+    <div class="form-control form_element">
+      <label class="label" for="email">Email ID</label>
+      <br>
+      <input class="input_field" type="text" formControlName="email" placeholder="Email ID">
+    </div>
+    <br>
+
+    <div class="form-control form_element" style="border: none">
+      <label class="label" for="password">Password</label>
+      <br>
+      <input class="input_field" type="password" formControlName="password" placeholder="Password">
+    </div>
+    <br>
+  </div>
+  <br>
+
+  <button class="btn btn-secondary" [disabled]="!loginForm.valid" (click)="loginUser()"
+    id="submit_button">Login</button>
+  <br>
+</form>
