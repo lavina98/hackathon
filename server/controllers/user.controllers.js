@@ -65,3 +65,11 @@ exports.userLikedNews = function(req,res) {
 
 
 }
+
+exports.getDetails = function (req, res) {
+    User.findOne({ email: req.body.email }, (err, document) => {
+        console.log(document);
+        res.send(document);
+    });
+
+}
