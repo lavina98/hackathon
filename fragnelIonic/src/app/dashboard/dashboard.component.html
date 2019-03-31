@@ -1,12 +1,15 @@
+<h2>Here</h2>
+<h3>Hr1</h3>
+<h1>okay</h1>
 <div *ngIf="isTopNews" class="container">
   <h1>Top Headlines</h1>
-
+  {{topHeadlines}}
   <div class="row">
 
 
     <div class="col-md-3">
       <div class="card">
-        <img class="card-img-top" [src]="topHeadlines[topNewsIndex+0].imageURL" alt="Card image cap" />
+        <img class="card-img-top/dashboard" [src]="topHeadlines[topNewsIndex+0].imageURL" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ topHeadlines[topNewsIndex+0].title }}</h5>
           <p class="card-text">
