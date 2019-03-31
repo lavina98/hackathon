@@ -43,3 +43,23 @@ exports.maliciousContent = async (req, res) => {
     });
 
 };
+
+exports.buzzwords = async (req, res) => {
+    console.log('Hello');
+    const url = req.body.url;
+    const pathToCode = path.join(__dirname, '../textRazor.py');
+    const options = {
+        args: [
+            url
+        ]
+    };
+    await ps.PythonShell.run(pathToCode, options, async (err, summary) => {
+        console.log('textrazor')
+        if (err) {
+            console.log(err);
+        }
+        console.log(summary);
+        console.log('I am inside the python buzzwords shell!');
+        // res.json(summary[0]);
+    });
+}
